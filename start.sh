@@ -40,6 +40,8 @@ case "$1" in
     pm2 startup systemd -u $USER --hp $HOME
     ;;
   update)
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    echo "📌 Rama actual: $BRANCH"
     echo "⬇️ Actualizando proyecto desde git..."
     git fetch origin
     git reset --hard origin/"$BRANCH" || { echo "❌ Error al actualizar código"; exit 1; }
