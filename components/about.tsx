@@ -23,7 +23,7 @@ export default function About() {
                 experiencia en <span className="underline">React, Next.js, y ASP.NET</span>. Me dedico al desarrollo
                 <span className="font-medium"> full-stack</span>,
                 creando aplicaciones web dinámicas y escalables, con integración a bases de datos y/o APIs como
-                <span className="underline"> FSirebase, Prisma o MongoDb</span>
+                <span className="underline"> Firebase, Prisma o MongoDb</span>
                 <span className="italic"> Disfruto realizar proyectos complejos</span> y siempre estoy <span
                 className="italic">perfeccionando mi conocimiento en desarrollo web</span> para mejorar la experiencia del usuario
                 y la eficiencia de mis proyectos.

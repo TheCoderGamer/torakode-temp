@@ -56,6 +56,6 @@ case "$1" in
     echo "✅ Update completado."
     ;;
   *)
-    echo "Uso: $0 {start|stop|restart|delete|logs|status|save|startup}"
+    echo "Uso: $0 {start|stop|restart|delete|logs|status|save|startup|update}"
     ;;
 esac

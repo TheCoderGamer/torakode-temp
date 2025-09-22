@@ -5,6 +5,8 @@ import {LuGraduationCap} from "react-icons/lu";
 import digitaltransform from "@/public/digitaltransform.png";
 import aincradapi from "@/public/aincradapi.png";
 import torakodecom from "@/public/torakodecom.png";
+import triviavr from "@/public/trivialvr.png"
+import vrwarfare from "@/public/vrwarfare.png"
 
 export const links = [
     {
@@ -59,6 +61,14 @@ export const experiencesData = [
         date: "2022 - 2023",
     },
     {
+        title: "Desarrollador juegos y experiencias VR/XR",
+        location: "MetaImmersion",
+        description:
+            "Desarrolle proyectos de experiencias VR/XR con Unity y con online para clientes en arcades VR",
+        icon: React.createElement(CgWorkAlt),
+        date: "2023",
+    },
+    {
         title: "Desarrollador Full Stack",
         location: "GranSolar Group",
         description:
@@ -83,6 +93,7 @@ export const projectsData = [
             "Una API multifuncional en ASP.NET para la gestión de Azure AD, SharePoint, Jira, despliegue en Azure y automatización con GitHub Actions.",
         tags: ["ASP.NET", "RESTful API", "Azure", "Unit Testing", "CI/CD"],
         imageUrl: aincradapi,
+        link: null
     },
     {
         title: "Web: Transformacion Digital",
@@ -90,6 +101,7 @@ export const projectsData = [
             "Pagina web informativa para el departamento de Transformación Digital",
         tags: ["ASP.NET", "Razor", "Javascript","HTML", "CSS", "Bootstrap"],
         imageUrl: digitaltransform,
+        link: null
     },
     {
         title: "Torakode.com",
@@ -97,6 +109,23 @@ export const projectsData = [
             "Pagina web personal con Next.js y Tailwind. Con secciones dinámicas y responsiva.",
         tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion"],
         imageUrl: torakodecom,
+        link: null
+    },
+    {
+        title: "Unity: Warfare VR",
+        description:
+            "Juego experiencia de Realidad Virtual desarrollado en Unity y con multijugador online y servidor.",
+        tags: ["Unity", "Photon", "C#", "RPC", "Online"],
+        imageUrl: vrwarfare,
+        link: "https://youtu.be/eoh6oa1Ux4s"
+    },
+    {
+        title: "Unity: Trivial VR",
+        description:
+            "Juego experiencia de Realidad Virtual desarrollado en Unity y con multijugador online y servidor. Con preguntas customizadas.",
+        tags: ["Unity", "Photon", "C#", "RPC", "Online"],
+        imageUrl: triviavr,
+        link: null
     },
 ] as const;
 
@@ -121,4 +150,7 @@ export const skillsData = [
     "Java",
     "Python",
     "Kotlin",
+    "Unity",
+    "Photon Networking",
+    "Mirror Networking",
 ] as const;
