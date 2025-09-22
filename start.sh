@@ -43,6 +43,8 @@ case "$1" in
     echo "⬇️ Actualizando proyecto desde git..."
     git fetch origin
     git reset --hard origin/"$BRANCH" || { echo "❌ Error al actualizar código"; exit 1; }
+    echo "Añadiendo +x a start.sh..."
+    chmod +x start.sh
     echo "📦 Instalando dependencias..."
     npm install --production || { echo "❌ Error en npm install"; exit 1; }
     echo "🏗 Construyendo la app..."
