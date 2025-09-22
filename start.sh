@@ -41,7 +41,7 @@ case "$1" in
     ;;
   update)
     echo "⬇️ Actualizando proyecto desde git..."
-    git pull origin main || { echo "❌ Error al hacer git pull"; exit 1; }
+    git pull origin master || { echo "❌ Error al hacer git pull"; exit 1; }
     echo "📦 Instalando dependencias..."
     npm install --production || { echo "❌ Error en npm install"; exit 1; }
     echo "🏗 Construyendo la app..."
