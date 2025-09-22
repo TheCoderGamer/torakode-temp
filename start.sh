@@ -39,6 +39,17 @@ case "$1" in
     echo "⚙️ Configurando arranque automático con systemd..."
     pm2 startup systemd -u $USER --hp $HOME
     ;;
+  update)
+    echo "⬇️ Actualizando proyecto desde git..."
+    git pull origin main || { echo "❌ Error al hacer git pull"; exit 1; }
+    echo "📦 Instalando dependencias..."
+    npm install --production || { echo "❌ Error en npm install"; exit 1; }
+    echo "🏗 Construyendo la app..."
+    npm run build || { echo "❌ Error en npm run build"; exit 1; }
+    echo "🔄 Reiniciando app con PM2..."
+    pm2 restart "$APP_NAME" || pm2 start npm --name "$APP_NAME" -- start --prefix "$APP_PATH"
+    echo "✅ Update completado."
+    ;;
   *)
     echo "Uso: $0 {start|stop|restart|delete|logs|status|save|startup}"
     ;;
