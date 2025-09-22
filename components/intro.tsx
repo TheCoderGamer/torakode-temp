@@ -4,13 +4,14 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Typewriter from 'typewriter-effect';
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import torakodeLogo from "@/public/torakode negro.jpg";
-import ignacioImg from "@/public/ignacioaguilar-fotoperfil.png"
+import ignacioImg from "@/public/ignacioaguilar-fotoperfil2.png"
 
 export default function Intro() {
   const { ref } = useSectionInView("Inicio", 0.5);
@@ -20,42 +21,13 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-left sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
-          >
-            <Image
-              src={ignacioImg}
-              alt="Logo de ToraKode"
-              width="192"
-              height="192"
-              quality="95"
-              priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-            />
-          </motion.div>
 
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
+
+
         </div>
       </div>
 
@@ -64,9 +36,46 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-          <span>Hola, soy <span className="font-bold">Nacho</span>.</span> {" "}
+          <div className="flex items-center p-4 space-x-4">
+              <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                      type: "tween",
+                      duration: 0.2,
+                  }}
+              >
+
+                  <Image
+                      src={ignacioImg}
+                      alt="Logo de ToraKode"
+                      width="250"
+                      height="250"
+                      quality="95"
+                      priority={true}
+                      className="h-18 w-18 rounded-full object-cover hover:scale-110 transition"
+                  />
+              </motion.div>
+              <p>Hola, soy <span className="font-bold">Nacho</span>. 👋</p> {" "}
+          </div>
           <span>Creo <span className="italic">webs y apps </span>a medida usando </span>
-          <span>NEXT.JS</span>, <span>REACT</span> y <span>TAILWINDCSS</span>. {" "}
+          <Typewriter options={{loop: true}}
+              onInit={(typewriter) => {
+                  typewriter.typeString('NEXT.JS')
+                      .pauseFor(2500)
+                      .deleteAll()
+                      .start();
+                  typewriter.typeString('REACT')
+                      .pauseFor(2500)
+                      .deleteAll()
+                      .start()
+                  typewriter.typeString('TAILWINDCSS')
+                      .pauseFor(2500)
+                      .deleteAll()
+                      .start();
+
+              }}
+          />
           <p>Mi especialidad: <span className="underline font-bold">NEXT.JS</span>.</p>
 
 
