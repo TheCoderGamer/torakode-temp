@@ -10,6 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import torakodeLogo from "@/public/torakode negro.jpg";
+import ignacioImg from "@/public/ignacioaguilar-fotoperfil.png"
 
 export default function Intro() {
   const { ref } = useSectionInView("Inicio", 0.5);
@@ -32,7 +33,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src={torakodeLogo}
+              src={ignacioImg}
               alt="Logo de ToraKode"
               width="192"
               height="192"
@@ -63,10 +64,10 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-          <span>Hola, soy <span className="font-bold">ToraKode</span>.</span> {" "}
-          <span>Creo <span className="italic">webs y apps </span>a medida en <span className="font-semibold">España</span> usando </span>
+          <span>Hola, soy <span className="font-bold">Nacho</span>.</span> {" "}
+          <span>Creo <span className="italic">webs y apps </span>a medida usando </span>
           <span>NEXT.JS</span>, <span>REACT</span> y <span>TAILWINDCSS</span>. {" "}
-          <p>Mi especialidad: <span className="underline font-bold">React + TypeScript</span>.</p>
+          <p>Mi especialidad: <span className="underline font-bold">NEXT.JS</span>.</p>
 
 
 

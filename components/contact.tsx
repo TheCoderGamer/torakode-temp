@@ -32,11 +32,11 @@ export default function Contact() {
       <SectionHeading>Contactame</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-        Porfavor contactame a mi directamente desde el correo {" "}
+        Si quieres trabajar conmigo, contactame al correo: {" "}
         <a className="underline" href="mailto:contacto@torakode.com">
           contacto@torakode.com
         </a>{" "}
-        . Gracias!
+        . Gracias
       </p>
 
       {/*<form

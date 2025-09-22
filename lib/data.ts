@@ -4,6 +4,7 @@ import {FaReact} from "react-icons/fa";
 import {LuGraduationCap} from "react-icons/lu";
 import digitaltransform from "@/public/digitaltransform.png";
 import aincradapi from "@/public/aincradapi.png";
+import torakodecom from "@/public/torakodecom.png";
 
 export const links = [
     {
@@ -95,7 +96,7 @@ export const projectsData = [
         description:
             "Pagina web personal con Next.js y Tailwind. Con secciones dinámicas y responsiva.",
         tags: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion"],
-        imageUrl: digitaltransform,
+        imageUrl: torakodecom,
     },
 ] as const;
 
@@ -113,6 +114,7 @@ export const skillsData = [
     "Framer Motion",
     "MongoDB",
     "PostgreSQL",
+    "Prisma",
     "ASP.NET",
     "C#",
     "Spring Boot",
